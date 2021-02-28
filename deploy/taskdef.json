@@ -3,7 +3,7 @@
   "containerDefinitions": [
       {
           "name": "sample-website",
-          "image": "nuxt-ecs-sample",
+          "image": "<IMAGE1_NAME>",
           "essential": true,
           "portMappings": [
               {
