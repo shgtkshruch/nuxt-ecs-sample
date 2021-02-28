@@ -44,3 +44,9 @@ $ aws ecr get-login-password --region ap-northeast-1 | \
 # Push docker image to ECR
 $ docker push <AWS_ACCOUNT_ID>.dkr.ecr.ap-northeast-1.amazonaws.com/nuxt-ecs-sample:1.0.0
 ```
+
+## Register task definition
+
+```
+$ aws ecs register-task-definition --cli-input-json file://deploy\/taskdef.json
+```
