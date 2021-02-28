@@ -50,3 +50,14 @@ $ docker push <AWS_ACCOUNT_ID>.dkr.ecr.ap-northeast-1.amazonaws.com/nuxt-ecs-sam
 ```
 $ aws ecs register-task-definition --cli-input-json file://deploy\/taskdef.json
 ```
+
+## Creat ECS service
+
+1. Create ECS Cluster in AWS console.（nuxt-ecs-sample-cluster）
+2. Creat ECS sercice with AWS CLI
+```
+$ aws ecs create-service --service-name nuxt-service --cli-input-json file://deploy\/create-service.json
+
+# Confirm
+$ aws ecs describe-services --cluster nuxt-ecs-sample-cluster --services nuxt-service
+```
